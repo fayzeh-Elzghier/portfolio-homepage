@@ -1,0 +1,12 @@
+@use "./variables" as *;
+
+@mixin container {
+  width: min($container-width, 92%);
+  margin-inline: auto;
+}
+
+@mixin mq($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}

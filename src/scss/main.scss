@@ -1,0 +1,15 @@
+@use "utils/utils";
+@use "base/resets";
+@use "base/base";
+@use "blocks/header";
+@use "blocks/hero";
+@use "blocks/projects";
+@use "blocks/footer";
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

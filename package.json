@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-homepage",
+  "version": "1.0.0",
+  "description": "Udacity portfolio homepage project",
+  "scripts": {
+    "build": "sass src/scss/main.scss dist/main.css",
+    "watch": "sass --watch src/scss/main.scss dist/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}

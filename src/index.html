@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fayzeh portfolio homepage" />
+  <title>Fayzeh Portfolio</title>
+  <link rel="stylesheet" href="../dist/main.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo">Fayzeh</div>
+
+      <nav aria-label="Primary navigation">
+        <ul class="header__links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__container">
+        <img
+          src="img/profile.jpg"
+          alt="Portrait of Fayzeh Elzghier"
+          class="hero__image"
+        />
+
+        <div class="hero__content">
+          <h1 id="hero-title" class="hero__title">
+            Fayzeh Elzghier | Robotics & AI Engineer
+          </h1>
+
+          <p class="hero__text">
+            Computer Engineering student passionate about robotics, AI, and embedded systems. I build intelligent systems that solve real-world problems.
+          </p>
+
+          <div class="hero__buttons">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--secondary">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <div class="projects__container">
+        <h2 id="projects-title" class="projects__title">Latest Projects</h2>
+
+        <div class="projects__grid">
+          <article class="card">
+            <img src="img/project1.jpg" alt="Micromouse maze solving robot" />
+            <div>
+              <h3>Micromouse Maze Solver Robot</h3>
+              <p>Autonomous robot that navigates a maze using the Flood Fill algorithm,
+              sensors, and motor control.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="img/project2.jpg" alt="Smart gas leak detection system" />
+            <div>
+              <h3>Smart Gas Leak Detection System</h3>
+              <p>IoT safety system that detects gas leaks and automatically shuts off
+              the valve to prevent accidents.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="img/project3.jpg" alt="Artificial intelligence system" />
+            <div>
+              <h3>AI Decision Support System</h3>
+              <p>AI-powered system designed to optimize decision making in complex
+              healthcare scenarios.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects__button">
+          <a href="#" class="btn btn--outline">View All Projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; Fayzeh Nidal Elzghier 2026</p>
+  </footer>
+
+  <script>
+    const header = document.querySelector(".header");
+
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("header--small", window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>

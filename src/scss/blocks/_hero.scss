@@ -1,0 +1,96 @@
+@use "../utils/utils" as *;
+
+.hero {
+  background: linear-gradient(rgba(11, 18, 32, 0.72), rgba(11, 18, 32, 0.72)),
+    url("../img/hero-bg.jpg") center / cover no-repeat;
+  padding: 56px 0;
+
+  &__container {
+    @include container;
+    display: grid;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &__image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: $radius;
+    border: 2px solid rgba(255, 255, 255, 0.16);
+  }
+
+  &__title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    color: $muted-color;
+    max-width: 60ch;
+    margin-bottom: 18px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  @include mq(800px) {
+    &__container {
+      grid-template-columns: 260px 1fr;
+      gap: 32px;
+    }
+
+    &__image {
+      width: 260px;
+      height: 260px;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  &--primary {
+    background: $primary-color;
+    color: #081026;
+  }
+
+  &--primary:hover,
+  &--primary:focus-visible {
+    background: #7894ff;
+  }
+
+  &--secondary {
+    background: $secondary-color;
+    color: #07140d;
+  }
+
+  &--secondary:hover,
+  &--secondary:focus-visible {
+    background: #34d76d;
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: $text-color;
+  }
+
+  &--outline:hover,
+  &--outline:focus-visible {
+    background: rgba(255, 255, 255, 0.06);
+  }
+}

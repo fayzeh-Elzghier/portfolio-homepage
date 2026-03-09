@@ -1,0 +1,231 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background: #0b1220;
+  color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 18, 32, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.header__container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  transition: padding 0.25s ease;
+}
+.header__logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+.header__links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.header__links a {
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: #b8c3e6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.header__links a:hover, .header__links a:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+.header--small .header__container {
+  padding: 10px 0;
+}
+
+.hero {
+  background: linear-gradient(rgba(11, 18, 32, 0.72), rgba(11, 18, 32, 0.72)), url("../img/hero-bg.jpg") center/cover no-repeat;
+  padding: 56px 0;
+}
+.hero__container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+.hero__image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.16);
+}
+.hero__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.hero__text {
+  color: #b8c3e6;
+  max-width: 60ch;
+  margin-bottom: 18px;
+}
+.hero__buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+@media (min-width: 800px) {
+  .hero__container {
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+  }
+  .hero__image {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+.btn:hover, .btn:focus-visible {
+  transform: translateY(-2px);
+}
+.btn--primary {
+  background: #5b7cff;
+  color: #081026;
+}
+.btn--primary:hover, .btn--primary:focus-visible {
+  background: #7894ff;
+}
+.btn--secondary {
+  background: #22c55e;
+  color: #07140d;
+}
+.btn--secondary:hover, .btn--secondary:focus-visible {
+  background: #34d76d;
+}
+.btn--outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+.btn--outline:hover, .btn--outline:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.projects {
+  padding: 48px 0 64px;
+}
+.projects__container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+.projects__title {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.projects__grid {
+  display: grid;
+  gap: 18px;
+}
+.projects__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+@media (min-width: 900px) {
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: #111a2e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 180px 1fr;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover, .card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card h3,
+.card p {
+  padding-inline: 14px;
+}
+.card h3 {
+  padding-top: 14px;
+  margin-bottom: 8px;
+}
+.card p {
+  padding-bottom: 16px;
+  color: #b8c3e6;
+}
+
+.footer {
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #b8c3e6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
