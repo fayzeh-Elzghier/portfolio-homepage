@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="dist/main.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="header">
     <div class="header__container">
@@ -24,7 +25,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__container">
         <img
@@ -34,12 +35,16 @@
         />
 
         <div class="hero__content">
+          <p class="hero__eyebrow">Robotics • AI • Embedded Systems</p>
+
           <h1 id="hero-title" class="hero__title">
             Fayzeh Elzghier | Robotics & AI Engineer
           </h1>
 
           <p class="hero__text">
-            Computer Engineering student passionate about robotics, AI, and embedded systems. I build intelligent systems that solve real-world problems.
+            Computer Engineering student passionate about robotics, artificial
+            intelligence, and embedded systems. I create technical solutions
+            that combine innovation, intelligence, and real-world impact.
           </p>
 
           <div class="hero__buttons">
@@ -57,41 +62,77 @@
         <div class="projects__grid">
           <article class="card">
             <img src="src/img/project1.jpg" alt="Micromouse maze solving robot" />
-            <div>
+            <div class="card__content">
+              <span class="card__tag">Robotics</span>
               <h3>Micromouse Maze Solver Robot</h3>
               <p>
-                Autonomous robot that navigates a maze using the Flood Fill algorithm,
-                sensors, and motor control.
+                Autonomous robot that navigates a maze using the Flood Fill
+                algorithm, sensors, and motor control.
               </p>
             </div>
           </article>
 
           <article class="card">
             <img src="src/img/project2.jpg" alt="Smart gas leak detection system" />
-            <div>
+            <div class="card__content">
+              <span class="card__tag">Embedded Systems</span>
               <h3>Smart Gas Leak Detection System</h3>
               <p>
-                IoT safety system that detects gas leaks and automatically shuts off
-                the valve to prevent accidents.
+                IoT safety system that detects gas leaks and automatically shuts
+                off the valve to prevent accidents.
               </p>
             </div>
           </article>
 
           <article class="card">
             <img src="src/img/project3.jpg" alt="Artificial intelligence system" />
-            <div>
+            <div class="card__content">
+              <span class="card__tag">Artificial Intelligence</span>
               <h3>AI Decision Support System</h3>
               <p>
-                AI-powered system designed to optimize decision making in complex
-                healthcare scenarios.
+                AI-powered system designed to optimize decision making in
+                complex healthcare scenarios.
               </p>
             </div>
           </article>
         </div>
 
         <div class="projects__button">
-          <a href="#" class="btn btn--outline">View All Projects</a>
+          <a href="#projects" class="btn btn--outline">View All Projects</a>
         </div>
+      </div>
+    </section>
+
+    <section id="skills" class="info-section" aria-labelledby="skills-title">
+      <div class="info-section__container">
+        <h2 id="skills-title">Skills</h2>
+        <p class="info-section__text">
+          Robotics, Embedded Systems, Artificial Intelligence, HTML, CSS, SCSS,
+          JavaScript, Python, C++, Arduino, problem solving, and technical project development.
+        </p>
+      </div>
+    </section>
+
+    <section id="resume" class="info-section" aria-labelledby="resume-title">
+      <div class="info-section__container">
+        <h2 id="resume-title">Resume</h2>
+        <p class="info-section__text">
+          Computer Engineering student with hands-on experience in robotics,
+          AI, and embedded systems, focused on building practical solutions for
+          real-world challenges.
+        </p>
+        <a href="#" class="btn btn--outline">Download Resume</a>
+      </div>
+    </section>
+
+    <section id="contact" class="info-section" aria-labelledby="contact-title">
+      <div class="info-section__container">
+        <h2 id="contact-title">Contact</h2>
+        <p class="info-section__text">
+          Interested in collaboration, internships, research opportunities, or
+          technical projects? Let’s connect.
+        </p>
+        <a href="mailto:your-email@example.com" class="btn btn--primary">Email Me</a>
       </div>
     </section>
   </main>
