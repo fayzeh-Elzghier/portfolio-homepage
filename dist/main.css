@@ -80,7 +80,7 @@ ul {
 }
 
 .hero {
-  background: linear-gradient(rgba(11, 18, 32, 0.72), rgba(11, 18, 32, 0.72)), url("../img/hero-bg.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(11, 18, 32, 0.72), rgba(11, 18, 32, 0.72)), url("../src/img/hero-bg.jpg") center/cover no-repeat;
   padding: 56px 0;
 }
 .hero__container {
